@@ -12,6 +12,13 @@ sensu:
     - rabbitmq
     - redis
 
+rabbitmqagent:
+  build: ./rabbit-agent
+  volumes: 
+    - "./etc/rabbit-agent:/etc/sensu"
+  links:
+    - rabbitmq
+
 rabbitmq:
   hostname: rabbitmq
   image: rabbitmq:3.4.4-management
@@ -35,10 +42,3 @@ jenkinsagent:
   - ./etc/jenkins-agent:/etc/sensu
   links:
    - rabbitmq
-   - jenkins
-
-jenkins:
-  image: jenkins
-  hostname: jenkins
-  ports:
-   - "8080:8080"

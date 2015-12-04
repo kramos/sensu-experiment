@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "check-jenkins": {
+      "handlers": [],
+      "command": "check-jenkins.rb -u jenkins:8080 ",
+      "interval": 5,
+      "subscribers": [ "jenkins" ]
+    }, 
+    "check-jenkins-metrics-jqs": {
+      "handlers": [],
+      "command": "metrics-jenkins-jqs.rb -u jenkins:8080 ",
+      "interval": 5,
+      "subscribers": [ "jenkins" ]
+    },
+    "check-jenkins-metrics": {
+      "handlers": [],
+      "command": "metrics-jenkins.rb -u jenkins:8080 ",
+      "interval": 5,
+      "subscribers": [ "jenkins" ]
+    }, 
+    "check-jenkins-job-status": {
+      "handlers": [],
+      "command": "check-jenkins-job-status.rb -u jenkins:8080 -v 3 --jobs 'test1'",
+      "interval": 5,
+      "subscribers": [ "jenkins" ]
+    }, 
+    "check-jenkins-health": {
+      "handlers": [],
+      "command": "check-jenkins-health.rb -u jenkins:8080 ",
+      "interval": 5,
+      "subscribers": [ "jenkins" ]
+    }, 
+    "check-jenkins-build-time": {
+      "handlers": [],
+      "command": "check-jenkins-build-time.rb -u jenkins:8080 --jobs test1=1,test2=1",
+      "interval": 5,
+      "subscribers": [ "jenkins" ]
+    }
+  }
+}
