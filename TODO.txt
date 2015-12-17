@@ -1,6 +1,0 @@
-1. locally - try a few plugins and get a general Jenkins, SonarQube, that machine set of checks at least failing
-2. in a stack - install those checks (necessary config into the running agent container on the JenkSona machine, install those check files into conf.d on the sensu central server
-3. get working
-4. export as data build
-5. improve wiki
-6. GOTO 1.

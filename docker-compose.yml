@@ -38,7 +38,7 @@ jenkinsagent:
    - jenkins
 
 jenkins:
-  image: jenkins
+  build: jenkins
   hostname: jenkins
   ports:
    - "8080:8080"

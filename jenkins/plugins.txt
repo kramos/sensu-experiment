@@ -1,0 +1,2 @@
+jackson2-api:2.5.4
+metrics:3.1.2.1
