@@ -14,7 +14,7 @@
     }, 
     "check-jenkins-job-status": {
       "handlers": [],
-      "command": "check-jenkins-job-status.rb --url jenkins -v 3 --jobs 'test1'",
+      "command": "check-jenkins-job-status.rb --url http://jenkins:8080 -v 3 --jobs 'test1'",
       "interval": 5,
       "subscribers": [ "jenkins" ]
     }, 
@@ -26,7 +26,7 @@
     }, 
     "check-jenkins-build-time": {
       "handlers": [],
-      "command": "check-jenkins-build-time.rb --url jenkins --jobs 'test1=100'",
+      "command": "check-jenkins-build-time.rb --url http://jenkins:8080 --jobs 'test1=100'",
       "interval": 5,
       "subscribers": [ "jenkins" ]
     }

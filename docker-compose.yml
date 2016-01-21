@@ -42,3 +42,5 @@ jenkins:
   hostname: jenkins
   ports:
    - "8080:8080"
+  volumes:
+  - ./etc/jenkins/jobs:/var/jenkins_home/jobs/
